@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Abstract studio portrait spotlight illustration">
+  <defs>
+    <radialGradient id="glow4" cx="50%" cy="42%" r="45%">
+      <stop offset="0%" stop-color="#f6efe0" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#b3893c" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#12294f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12294f"/>
+      <stop offset="100%" stop-color="#0c1c38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg4)"/>
+  <rect width="800" height="1000" fill="url(#glow4)"/>
+  <circle cx="400" cy="420" r="150" fill="none" stroke="#f6efe0" stroke-opacity="0.5" stroke-width="1.5"/>
+  <circle cx="400" cy="420" r="190" fill="none" stroke="#f6efe0" stroke-opacity="0.25" stroke-width="1"/>
+</svg>
