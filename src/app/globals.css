@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #ffffff;
-  --bg-soft: #f8f9fa;
-  --bg-raised: #ffffff;
-  --ink: #12161f;
-  --ink-muted: #57606f;
-  --ink-faint: #8891a1;
-  --line: #e7e9ee;
-  --line-soft: #eef0f4;
+  --bg: #f5eccf;
+  --bg-soft: #eee1bc;
+  --bg-raised: #faf6e9;
+  --ink: #000435;
+  --ink-muted: #3c4142;
+  --ink-faint: #767c7e;
+  --line: #ddd1a4;
+  --line-soft: #e8dfc0;
 
-  --accent: #1c3d78;
-  --accent-strong: #12294f;
-  --accent-soft: #eaf0fb;
-  --accent-contrast: #ffffff;
+  --accent: #000435;
+  --accent-strong: #00021d;
+  --accent-soft: #e2e1eb;
+  --accent-contrast: #f5eccf;
 
-  --gold: #b3893c;
-  --gold-soft: #f6efe0;
+  --gold: #d2b450;
+  --gold-soft: #efe0ae;
+  --gold-strong: #b8933c;
 
   --success: #1f7a4d;
   --success-soft: #e7f5ee;
 
-  --shadow-color: 220 45% 20%;
+  --shadow-color: 240 100% 10%;
 }
 
 @theme inline {
@@ -41,6 +42,7 @@
 
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-gold-strong: var(--gold-strong);
 
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
@@ -48,7 +50,7 @@
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-manrope);
 
-  --container-content: 76rem;
+  --container-content: 92rem;
 }
 
 @layer base {
@@ -118,7 +120,13 @@
 
   @media (min-width: 768px) {
     .content-shell {
-      padding-inline: 2.5rem;
+      padding-inline: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .content-shell {
+      padding-inline: 4rem;
     }
   }
 

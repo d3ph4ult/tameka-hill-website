@@ -22,7 +22,7 @@ export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) 
     <section id="testimonials" className="bg-bg-soft py-24 sm:py-28">
       <div className="content-shell">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <p className="eyebrow">Testimonials</p>
             <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
               What clients say afterward

@@ -1,14 +1,15 @@
 export const site = {
-  name: "Jordan Blake",
+  name: "Tameka Hill",
   tagline: "Speaker & Career Strategist",
-  email: "hello@jordanblake.co",
+  email: "hello@tamekahill.co",
   phone: "+1 (555) 010-0142",
-  whatsapp: "https://wa.me/15550100142",
+  whatsapp: "https://wa.me/18768336463",
   hours: "Mon–Fri, 9:00 AM–6:00 PM ET",
 };
 
 export const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#book", label: "The Book" },
   { href: "#services", label: "Services" },
   { href: "#speaking", label: "Speaking" },
   { href: "#resume-writing", label: "Résumé Writing" },
@@ -21,6 +22,30 @@ export const trustStats = [
   { value: "60+", label: "Workshops delivered" },
   { value: "95+", label: "Speaking engagements" },
   { value: "4.9/5", label: "Client satisfaction" },
+];
+
+export const book = {
+  eyebrow: "Published Work",
+  title: "The Girl in the Shadows",
+  subtitle: "A Novel",
+  // TODO: replace with the short description Tameka is sending over.
+  description:
+    "Tameka Hill's debut novel. Full description coming soon.",
+  details: [] as string[],
+  cta: "Get the Book",
+  href: "https://a.co/d/014sUrBN",
+  coverImage: "/book/signing.jpg",
+  supportingImages: [
+    { src: "/book/holding.jpg", alt: "Tameka Hill holding a copy of The Girl in the Shadows at her book signing" },
+    { src: "/book/stack.jpg", alt: "Copies of The Girl in the Shadows by Tameka Hill on display" },
+  ],
+};
+
+// Résumé-writing proof is shown as image testimonials rather than text quotes.
+export const resumeTestimonialImages: { src: string; alt: string }[] = [
+  { src: "/resume-testimonials/amanda-waite.jpg", alt: "Testimonial from Amanda Waite: \"My resume gave me the additional confidence I needed in my job search... I was simply amazed, it helped me to start my career in a brand new profession.\"" },
+  { src: "/resume-testimonials/kimesha-walters.jpg", alt: "Testimonial from Kimesha Walters, Brand & PR Strategist: \"Tameka did an exceptional job in creating a contemporary design for my resume, capturing the diversity of my skills through excellent diction and presenting it in a visually appealing manner.\"" },
+  { src: "/resume-testimonials/martina-alleyne.jpg", alt: "Testimonial from Martina Alleyne, Project Information Officer: \"Tameka is an accomplished writer who knows how to get the desired results. My resume is beyond my expectations.\"" },
 ];
 
 export const serviceCategories = [
@@ -78,7 +103,7 @@ export const faqItems = [
   {
     question: "How do I book a speaking engagement?",
     answer:
-      "Use the booking form below — choose \"Public speaking,\" share your preferred date and event format, and Jordan's team will follow up within two business days to confirm availability and details.",
+      "Use the booking form below — choose \"Public speaking,\" share your preferred date and event format, and Tameka's team will follow up within two business days to confirm availability and details.",
   },
   {
     question: "How long does résumé writing take?",

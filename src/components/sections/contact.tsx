@@ -3,7 +3,8 @@
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { CheckCircle2, Clock, Mail, MessageCircle, Phone } from "lucide-react";
-import { initialContactState, submitContact } from "@/app/actions/contact";
+import { submitContact } from "@/app/actions/contact";
+import { initialContactState } from "@/lib/action-state";
 import { site } from "@/lib/constants";
 
 const inputClasses =
@@ -15,7 +16,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex w-full items-center justify-center rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-accent-contrast transition-colors hover:bg-accent-strong disabled:opacity-60"
+      className="inline-flex w-full items-center justify-center rounded-full bg-gold px-7 py-3.5 text-base font-semibold text-ink transition-colors hover:bg-gold-strong disabled:opacity-60"
     >
       {pending ? "Sending…" : "Send Message"}
     </button>
@@ -31,7 +32,7 @@ export function Contact() {
         <div>
           <p className="eyebrow">Contact</p>
           <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">Get in touch</h2>
-          <p className="mt-4 max-w-sm text-base leading-relaxed text-ink-muted">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-muted">
             For bookings, use the form above. For everything else — press,
             partnerships, questions — reach out directly.
           </p>

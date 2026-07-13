@@ -15,7 +15,7 @@ export function SiteFooter({ socialLinks }: { socialLinks: SocialLink[] }) {
               aria-hidden="true"
               className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-contrast"
             >
-              JB
+              TH
             </span>
             {site.name}
           </Link>

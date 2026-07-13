@@ -45,14 +45,14 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
   return (
     <section id="portfolio" className="py-24 sm:py-28">
       <div className="content-shell">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <p className="eyebrow">Portfolio</p>
           <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
             From the stage and the studio
           </h2>
         </div>
 
-        <ul className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>li]:mb-5">
+        <ul className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 xl:columns-4 [&>li]:mb-5">
           {images.map((image, index) => (
             <li key={image.id} className="break-inside-avoid">
               <button

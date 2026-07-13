@@ -40,7 +40,7 @@ export function SiteNav() {
             aria-hidden="true"
             className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-contrast"
           >
-            JB
+            TH
           </span>
           {site.name}
         </a>

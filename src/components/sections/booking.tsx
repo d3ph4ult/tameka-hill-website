@@ -9,8 +9,8 @@ export function Booking() {
           <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
             Tell us what you need
           </h2>
-          <p className="mt-4 max-w-sm text-base leading-relaxed text-ink-muted">
-            Share a few details and Jordan&rsquo;s team will confirm availability
+          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-muted">
+            Share a few details and Tameka&rsquo;s team will confirm availability
             within two business days. Every request is reviewed by a person —
             never auto-approved.
           </p>

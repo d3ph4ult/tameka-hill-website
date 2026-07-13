@@ -1,4 +1,4 @@
-# Jordan Blake — Personal Brand Platform
+# Tameka Hill — Personal Brand Platform
 
 A premium, minimalist personal-brand landing page and social media hub for a
 public speaker / résumé-writing consultant: booking system, portfolio
@@ -100,6 +100,7 @@ supabase/
 - Contact info (email/phone/WhatsApp/hours): `src/lib/constants.ts` (`site` object)
 - Social links, testimonials, portfolio photos: seeded in Supabase — edit via `/admin` once connected, or update `supabase/migrations/0002_seed.sql` before first run
 - Portfolio placeholder art: `public/portfolio/*.svg` (abstract stage-lighting graphics — swap for real event photography)
+- Book section (title, description, retailer link, cover + supporting art): `src/lib/constants.ts` (`book` object), `public/book/*.svg`
 - Legal pages: `src/app/privacy/page.tsx`, `src/app/terms/page.tsx` are boilerplate and need real legal review before launch
 
 ## Deploying

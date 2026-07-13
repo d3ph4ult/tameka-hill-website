@@ -20,22 +20,22 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Jordan Blake — Speaker & Career Strategist",
-    template: "%s — Jordan Blake",
+    default: "Tameka Hill — Speaker & Career Strategist",
+    template: "%s — Tameka Hill",
   },
   description:
     "Keynote speaker, workshop facilitator, and professional résumé writer. Book a speaking engagement or get a résumé that gets read.",
   openGraph: {
-    title: "Jordan Blake — Speaker & Career Strategist",
+    title: "Tameka Hill — Speaker & Career Strategist",
     description:
       "Keynote speaker, workshop facilitator, and professional résumé writer. Book a speaking engagement or get a résumé that gets read.",
     url: siteUrl,
-    siteName: "Jordan Blake",
+    siteName: "Tameka Hill",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jordan Blake — Speaker & Career Strategist",
+    title: "Tameka Hill — Speaker & Career Strategist",
     description:
       "Keynote speaker, workshop facilitator, and professional résumé writer.",
   },

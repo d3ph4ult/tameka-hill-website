@@ -12,7 +12,7 @@ export function SocialHub({ socialLinks }: { socialLinks: SocialLink[] }) {
   return (
     <section className="bg-bg-soft py-24 sm:py-28">
       <div className="content-shell">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <p className="eyebrow">Connect</p>
           <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
             One place to follow the work
@@ -23,7 +23,7 @@ export function SocialHub({ socialLinks }: { socialLinks: SocialLink[] }) {
           </p>
         </div>
 
-        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {socialLinks.map((link, i) => {
             const Icon = socialIconMap[link.platform];
             return (
@@ -32,7 +32,7 @@ export function SocialHub({ socialLinks }: { socialLinks: SocialLink[] }) {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.45, delay: (i % 3) * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.45, delay: (i % 4) * 0.06, ease: [0.22, 1, 0.36, 1] }}
               >
                 <a
                   href={link.url}

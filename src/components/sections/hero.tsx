@@ -49,9 +49,9 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted"
           >
-            Jordan helps organizations move audiences from the stage and helps
+            Tameka helps organizations move audiences from the stage and helps
             professionals get hired on paper — through keynotes, workshops,
             one-on-one coaching, and résumés built to be read.
           </motion.p>
@@ -96,10 +96,11 @@ export function Hero() {
             className="card-shadow-lg relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]"
           >
             <Image
-              src="/portfolio/stage-04.svg"
-              alt="Abstract spotlight portrait illustration representing Jordan Blake on stage"
+              src="/hero-new/portrait-black-dress.jpg"
+              alt="Portrait of Tameka Hill"
               fill
               priority
+              sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
             />
           </motion.div>

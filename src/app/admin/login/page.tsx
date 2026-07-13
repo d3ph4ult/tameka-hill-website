@@ -12,7 +12,7 @@ export default function AdminLoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-bg-soft px-4">
       <div className="w-full max-w-sm">
         <p className="text-center font-display text-2xl font-medium text-ink">Admin sign in</p>
-        <p className="mt-1 text-center text-sm text-ink-muted">Jordan Blake dashboard</p>
+        <p className="mt-1 text-center text-sm text-ink-muted">Tameka Hill dashboard</p>
 
         <Suspense fallback={null}>
           <LoginForm />

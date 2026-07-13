@@ -4,17 +4,7 @@ import { contactSchema } from "@/lib/validation";
 import { createClient } from "@/lib/supabase/server";
 import { sendEmail } from "@/lib/email";
 import { site } from "@/lib/constants";
-
-export interface ContactActionState {
-  status: "idle" | "success" | "error";
-  message: string;
-  errors?: Record<string, string>;
-}
-
-export const initialContactState: ContactActionState = {
-  status: "idle",
-  message: "",
-};
+import type { ContactActionState } from "@/lib/action-state";
 
 export async function submitContact(
   _prevState: ContactActionState,

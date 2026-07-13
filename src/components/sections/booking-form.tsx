@@ -3,7 +3,8 @@
 import { cloneElement, isValidElement, useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { CheckCircle2 } from "lucide-react";
-import { createBooking, initialBookingState } from "@/app/actions/booking";
+import { createBooking } from "@/app/actions/booking";
+import { initialBookingState } from "@/lib/action-state";
 import { site } from "@/lib/constants";
 
 const serviceOptions = [
@@ -22,7 +23,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex w-full items-center justify-center rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-accent-contrast transition-colors hover:bg-accent-strong disabled:opacity-60 sm:w-auto"
+      className="inline-flex w-full items-center justify-center rounded-full bg-gold px-7 py-3.5 text-base font-semibold text-ink transition-colors hover:bg-gold-strong disabled:opacity-60 sm:w-auto"
     >
       {pending ? "Sending request…" : "Request Booking"}
     </button>

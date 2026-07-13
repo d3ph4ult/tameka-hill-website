@@ -6,8 +6,8 @@ export function Services() {
   return (
     <section id="services" className="bg-bg-soft py-24 sm:py-28">
       <div className="content-shell">
-        <div className="max-w-2xl">
-          <p className="eyebrow">What Jordan Offers</p>
+        <div className="max-w-3xl">
+          <p className="eyebrow">What Tameka Offers</p>
           <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
             Two crafts, one standard
           </h2>
@@ -17,7 +17,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 lg:grid-cols-3">
           {serviceCategories.map((service) => (
             <div
               key={service.id}

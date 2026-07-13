@@ -1,4 +1,4 @@
--- Jordan Blake platform: core schema
+-- Tameka Hill platform: core schema
 -- Run in order against a fresh Supabase project (SQL editor or `supabase db push`).
 
 create extension if not exists "pgcrypto";

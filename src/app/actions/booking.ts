@@ -4,17 +4,7 @@ import { bookingSchema } from "@/lib/validation";
 import { serviceLabels, site } from "@/lib/constants";
 import { createClient } from "@/lib/supabase/server";
 import { sendEmail } from "@/lib/email";
-
-export interface BookingActionState {
-  status: "idle" | "success" | "error";
-  message: string;
-  errors?: Record<string, string>;
-}
-
-export const initialBookingState: BookingActionState = {
-  status: "idle",
-  message: "",
-};
+import type { BookingActionState } from "@/lib/action-state";
 
 export async function createBooking(
   _prevState: BookingActionState,
@@ -89,7 +79,7 @@ export async function createBooking(
     subject: `We received your ${serviceLabel} request`,
     html: `<p>Hi ${escapeHtml(data.fullName)},</p>
       <p>Thanks for requesting <strong>${escapeHtml(serviceLabel)}</strong> for ${escapeHtml(data.preferredDate)}${data.preferredTime ? ` at ${escapeHtml(data.preferredTime)}` : ""}.
-      This is a request, not a confirmation — Jordan's team will follow up within two business days.</p>
+      This is a request, not a confirmation — Tameka's team will follow up within two business days.</p>
       <p>If anything changes, reply to this email.</p>`,
   });
 
