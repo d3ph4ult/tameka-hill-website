@@ -1,5 +1,4 @@
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { serviceCategories } from "@/lib/constants";
 
 export function Services() {
@@ -17,7 +16,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 lg:grid-cols-2">
           {serviceCategories.map((service) => (
             <div
               key={service.id}
@@ -28,7 +27,7 @@ export function Services() {
               <h3 className="mt-3 font-display text-2xl font-medium text-ink">{service.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">{service.description}</p>
 
-              <ul className="mt-6 space-y-2.5">
+              <ul className="mt-6 flex-1 space-y-2.5">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-ink">
                     <Check size={16} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />
@@ -36,15 +35,6 @@ export function Services() {
                   </li>
                 ))}
               </ul>
-
-              <div className="mt-8 flex flex-1 flex-col justify-end gap-4">
-                <p className="text-xs font-medium uppercase tracking-wide text-ink-faint">
-                  {service.priceNote}
-                </p>
-                <Button href={service.href} variant="secondary" className="w-full">
-                  {service.cta}
-                </Button>
-              </div>
             </div>
           ))}
         </div>

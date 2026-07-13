@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "outline-inverse";
 type Size = "md" | "lg";
 
 const base =
@@ -14,6 +14,10 @@ const variants: Record<Variant, string> = {
   secondary:
     "border border-line bg-bg text-ink hover:border-accent hover:text-accent",
   ghost: "text-ink hover:text-accent",
+  // For use on dark/accent-colored backgrounds (e.g. the closing CTA banner),
+  // where "secondary"'s ink-on-light styling would be invisible.
+  "outline-inverse":
+    "border border-accent-contrast/30 bg-transparent text-accent-contrast hover:border-accent-contrast hover:bg-accent-contrast/10",
 };
 
 const sizes: Record<Size, string> = {

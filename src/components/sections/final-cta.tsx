@@ -20,12 +20,7 @@ export function FinalCta() {
             <Button href="#booking" size="lg">
               Book a Service
             </Button>
-            <Button
-              href="#contact"
-              size="lg"
-              variant="secondary"
-              className="border-accent-contrast/30 bg-transparent text-accent-contrast hover:border-accent-contrast hover:text-accent-contrast"
-            >
+            <Button href="#contact" size="lg" variant="outline-inverse">
               Contact Me
             </Button>
           </div>

@@ -1,8 +1,8 @@
 export const site = {
   name: "Tameka Hill",
   tagline: "Speaker & Career Strategist",
-  email: "hello@tamekahill.co",
-  phone: "+1 (555) 010-0142",
+  email: "akemathill@gmail.com",
+  phone: "+1 876-833-6463",
   whatsapp: "https://wa.me/18768336463",
   hours: "Mon–Fri, 9:00 AM–6:00 PM ET",
 };
@@ -62,9 +62,6 @@ export const serviceCategories = [
       "Workshops & seminars",
       "Conference panels",
     ],
-    priceNote: "Starting at $2,500 per engagement",
-    cta: "Book a Speaking Session",
-    href: "#booking",
   },
   {
     id: "resume-writing",
@@ -78,24 +75,6 @@ export const serviceCategories = [
       "LinkedIn optimization",
       "Career document consultation",
     ],
-    priceNote: "3–5 business day turnaround",
-    cta: "Get Your Résumé Reviewed",
-    href: "#booking",
-  },
-  {
-    id: "coaching",
-    eyebrow: "Service 03",
-    title: "Career Coaching",
-    description:
-      "Focused, one-on-one sessions for people navigating a job search, a promotion case, or a career pivot.",
-    items: [
-      "One-on-one coaching",
-      "Interview preparation",
-      "Career strategy planning",
-    ],
-    priceNote: "By appointment",
-    cta: "Request Coaching",
-    href: "#booking",
   },
 ] as const;
 
