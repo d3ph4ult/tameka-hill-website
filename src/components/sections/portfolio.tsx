@@ -43,38 +43,34 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
   const active = activeIndex !== null ? images[activeIndex] : null;
 
   return (
-    <section id="portfolio" className="py-24 sm:py-28">
-      <div className="content-shell">
-        <div className="max-w-3xl">
-          <p className="eyebrow">Portfolio</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
-            From the stage and the studio
-          </h2>
-        </div>
+    <div>
+      <p className="eyebrow">Portfolio</p>
+      <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+        From the stage and the studio
+      </h2>
 
-        <ul className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 xl:columns-4 [&>li]:mb-5">
-          {images.map((image, index) => (
-            <li key={image.id} className="break-inside-avoid">
-              <button
-                type="button"
-                onClick={(e) => open(index, e.currentTarget)}
-                className="card-shadow group relative block w-full overflow-hidden rounded-2xl text-left"
-              >
+      <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-2">
+        {images.map((image, index) => (
+          <li key={image.id}>
+            <button
+              type="button"
+              onClick={(e) => open(index, e.currentTarget)}
+              className="group block w-full text-left"
+            >
+              <span className="card-shadow relative block aspect-[4/5] w-full overflow-hidden rounded-xl">
                 <Image
                   src={image.image_url}
                   alt={image.title}
-                  width={800}
-                  height={1000}
-                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  fill
+                  sizes="(min-width: 1024px) 20vw, 45vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-4 text-sm font-medium text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                  {image.title}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+              </span>
+              <span className="mt-2.5 block text-sm font-medium text-ink">{image.title}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
 
       <AnimatePresence>
         {active && (
@@ -140,6 +136,6 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 }

@@ -10,7 +10,7 @@ export function SocialHub({ socialLinks }: { socialLinks: SocialLink[] }) {
   if (socialLinks.length === 0) return null;
 
   return (
-    <section className="bg-bg-soft py-24 sm:py-28">
+    <section className="py-24 sm:py-28">
       <div className="content-shell">
         <div className="max-w-3xl">
           <p className="eyebrow">Connect</p>

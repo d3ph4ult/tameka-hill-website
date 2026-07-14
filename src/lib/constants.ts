@@ -13,7 +13,6 @@ export const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#speaking", label: "Speaking" },
   { href: "#resume-writing", label: "Résumé Writing" },
-  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
 

@@ -4,25 +4,33 @@ export function FinalCta() {
   return (
     <section className="px-4 pb-24 sm:px-6 sm:pb-28">
       <div className="content-shell">
-        <div className="relative overflow-hidden rounded-[2rem] bg-accent px-8 py-16 text-center sm:px-16 sm:py-20">
+        <div className="relative overflow-hidden rounded-2xl bg-accent px-8 py-12 sm:px-14 sm:py-14">
+          <div
+            aria-hidden="true"
+            className="royal-pattern pointer-events-none absolute inset-0"
+          />
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent-contrast/10 via-transparent to-transparent"
           />
-          <h2 className="relative font-display text-3xl font-medium text-accent-contrast sm:text-4xl">
-            Ready to elevate your career or inspire your audience?
-          </h2>
-          <p className="relative mx-auto mt-4 max-w-xl text-base text-accent-contrast/80">
-            Book a speaking engagement or receive a professionally crafted
-            résumé today.
-          </p>
-          <div className="relative mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <Button href="#booking" size="lg">
-              Book a Service
-            </Button>
-            <Button href="#contact" size="lg" variant="outline-inverse">
-              Contact Me
-            </Button>
+          <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-xl">
+              <h2 className="font-display text-3xl font-medium text-accent-contrast sm:text-4xl">
+                Ready to elevate your career or inspire your audience?
+              </h2>
+              <p className="mt-4 text-base text-accent-contrast/80">
+                Book a speaking engagement or receive a professionally crafted
+                résumé today.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
+              <Button href="#booking" size="lg">
+                Book a Service
+              </Button>
+              <Button href="#contact" size="lg" variant="outline-inverse">
+                Contact Me
+              </Button>
+            </div>
           </div>
         </div>
       </div>
