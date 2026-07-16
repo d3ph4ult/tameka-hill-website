@@ -1,26 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { trackSocialClick } from "@/app/actions/social";
 import { socialIconMap } from "@/lib/social-icons";
-import type { SocialLink } from "@/lib/types";
+import type { PortfolioImage, SocialLink } from "@/lib/types";
 
-export function SocialHub({ socialLinks }: { socialLinks: SocialLink[] }) {
+export function SocialHub({
+  socialLinks,
+  images = [],
+}: {
+  socialLinks: SocialLink[];
+  images?: PortfolioImage[];
+}) {
   if (socialLinks.length === 0) return null;
+
+  const filmstrip = images.slice(0, 4);
 
   return (
     <section className="py-24 sm:py-28">
       <div className="content-shell">
-        <div className="max-w-3xl">
-          <p className="eyebrow">Connect</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
-            One place to follow the work
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-muted">
-            Event clips, career tips, and behind-the-scenes moments — pick the
-            platform you&rsquo;re already on.
-          </p>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="eyebrow">Connect</p>
+            <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+              One place to follow the work
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink-muted">
+              Event clips, career tips, and behind-the-scenes moments — pick the
+              platform you&rsquo;re already on.
+            </p>
+          </div>
+
+          {filmstrip.length > 0 && (
+            <ul className="flex shrink-0 gap-3" aria-hidden="true">
+              {filmstrip.map((image, i) => (
+                <li
+                  key={image.id}
+                  className="card-shadow relative hidden aspect-square w-16 overflow-hidden rounded-xl border border-line sm:block"
+                  style={{ marginTop: i % 2 === 1 ? "1.25rem" : 0 }}
+                >
+                  <Image src={image.image_url} alt="" fill sizes="64px" className="object-cover" />
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

@@ -10,6 +10,7 @@ import { ResumeTestimonials } from "@/components/sections/resume-testimonials";
 import { Faq } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
 import { FinalCta } from "@/components/sections/final-cta";
+import { Signoff } from "@/components/sections/signoff";
 import { getPortfolioImages, getSocialLinks } from "@/lib/data";
 
 export default async function Home() {
@@ -23,15 +24,16 @@ export default async function Home() {
       <SiteNav />
       <main>
         <Hero />
-        <SocialHub socialLinks={socialLinks} />
+        <Work images={portfolioImages} />
+        <SocialHub socialLinks={socialLinks} images={portfolioImages} />
         <About />
         <Book />
-        <Work images={portfolioImages} />
         <Booking />
         <ResumeTestimonials />
         <Faq />
         <Contact />
         <FinalCta />
+        <Signoff />
       </main>
       <SiteFooter socialLinks={socialLinks} />
     </>
