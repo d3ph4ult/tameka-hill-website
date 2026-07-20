@@ -38,7 +38,7 @@ export function SocialHub({
               {filmstrip.map((image, i) => (
                 <li
                   key={image.id}
-                  className="card-shadow relative hidden aspect-square w-16 overflow-hidden rounded-xl border border-line sm:block"
+                  className="card-shadow relative hidden aspect-square w-16 overflow-hidden rounded-sm border border-line sm:block"
                   style={{ marginTop: i % 2 === 1 ? "1.25rem" : 0 }}
                 >
                   <Image src={image.image_url} alt="" fill sizes="64px" className="object-cover" />
@@ -66,7 +66,7 @@ export function SocialHub({
                   onClick={() => {
                     void trackSocialClick(link.platform);
                   }}
-                  className="group flex h-full flex-col justify-between gap-6 rounded-2xl border border-line bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
+                  className="group flex h-full flex-col justify-between gap-6 rounded-sm border border-line bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
                 >
                   <div className="flex items-start justify-between">
                     <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-accent">

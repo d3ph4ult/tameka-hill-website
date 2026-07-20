@@ -15,7 +15,7 @@ const serviceOptions = [
 ];
 
 const inputClasses =
-  "w-full rounded-xl border border-line bg-bg px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus-visible:outline-2 focus-visible:outline-accent";
+  "w-full rounded-sm border border-line bg-bg px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus-visible:outline-2 focus-visible:outline-accent";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -23,7 +23,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="btn-gold-shine inline-flex w-full items-center justify-center rounded-full px-7 py-3.5 text-base font-semibold text-ink disabled:opacity-60 sm:w-auto"
+      className="btn-gold-shine inline-flex w-full items-center justify-center rounded-sm px-8 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink disabled:opacity-60 sm:w-auto"
     >
       {pending ? "Sending request…" : "Request Booking"}
     </button>
@@ -39,7 +39,7 @@ export function BookingForm() {
       <div
         role="status"
         aria-live="polite"
-        className="card-shadow flex flex-col items-center gap-3 rounded-[1.75rem] border border-line bg-bg-raised px-8 py-16 text-center"
+        className="card-shadow flex flex-col items-center gap-3 rounded-sm border border-line bg-bg-raised px-8 py-16 text-center"
       >
         <CheckCircle2 size={40} className="text-success" aria-hidden="true" />
         <p className="font-display text-xl font-medium text-ink">Request received</p>
@@ -49,7 +49,7 @@ export function BookingForm() {
   }
 
   return (
-    <form action={formAction} className="card-shadow space-y-6 rounded-[1.75rem] border border-line bg-bg-raised p-6 sm:p-9">
+    <form action={formAction} className="card-shadow space-y-6 rounded-sm border border-line bg-bg-raised p-6 sm:p-9">
       {/* Honeypot — hidden from real visitors, filled by most bots */}
       <div className="absolute h-0 w-0 overflow-hidden opacity-0" aria-hidden="true">
         <label htmlFor="company">Company</label>
@@ -57,7 +57,7 @@ export function BookingForm() {
       </div>
 
       {state.status === "error" && state.message && (
-        <p role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
+        <p role="alert" className="rounded-sm bg-red-50 px-4 py-3 text-sm text-red-700">
           {state.message}
         </p>
       )}

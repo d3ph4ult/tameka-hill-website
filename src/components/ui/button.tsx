@@ -6,22 +6,23 @@ type Variant = "primary" | "secondary" | "ghost" | "outline-inverse";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-sm font-semibold uppercase transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
   primary: "btn-gold-shine text-ink",
   secondary:
-    "border border-line bg-bg text-ink hover:border-accent hover:text-accent",
+    "border border-ink bg-transparent text-ink hover:bg-ink hover:text-bg",
   ghost: "text-ink hover:text-accent",
-  // For use on dark/accent-colored backgrounds (e.g. the closing CTA banner),
-  // where "secondary"'s ink-on-light styling would be invisible.
+  // For use on dark/ink-colored backgrounds (e.g. the closing CTA banner),
+  // where "secondary"'s ink-on-light styling would be invisible. Uses --bg
+  // (white) directly as the light contrast color for a dark surface.
   "outline-inverse":
-    "border border-accent-contrast/30 bg-transparent text-accent-contrast hover:border-accent-contrast hover:bg-accent-contrast/10",
+    "border border-bg/40 bg-transparent text-bg hover:border-bg hover:bg-bg/10",
 };
 
 const sizes: Record<Size, string> = {
-  md: "text-sm px-5 py-2.5",
-  lg: "text-base px-7 py-3.5",
+  md: "text-xs tracking-[0.12em] px-6 py-3",
+  lg: "text-xs tracking-[0.14em] px-8 py-4",
 };
 
 interface CommonProps {

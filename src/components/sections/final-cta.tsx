@@ -4,21 +4,21 @@ export function FinalCta() {
   return (
     <section className="px-4 pb-24 sm:px-6 sm:pb-28">
       <div className="content-shell">
-        <div className="relative overflow-hidden rounded-2xl bg-accent px-8 py-12 sm:px-14 sm:py-14">
+        <div className="relative overflow-hidden rounded-sm bg-ink px-8 py-12 sm:px-14 sm:py-14">
           <div
             aria-hidden="true"
             className="royal-pattern pointer-events-none absolute inset-0"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent-contrast/10 via-transparent to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-bg/10 via-transparent to-transparent"
           />
           <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-xl">
-              <h2 className="font-display text-3xl font-medium text-accent-contrast sm:text-4xl">
+              <h2 className="font-display text-3xl font-normal text-bg sm:text-4xl">
                 Ready to elevate your career or inspire your audience?
               </h2>
-              <p className="mt-4 text-base text-accent-contrast/80">
+              <p className="mt-4 text-base text-bg/75">
                 Book a speaking engagement or receive a professionally crafted
                 résumé today.
               </p>

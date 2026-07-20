@@ -18,7 +18,7 @@ export function ResumeTestimonials() {
           {resumeTestimonialImages.map((image) => (
             <div
               key={image.src}
-              className="card-shadow flex items-center justify-center rounded-2xl border border-line bg-bg-raised p-3"
+              className="card-shadow flex items-center justify-center rounded-sm border border-line bg-bg-raised p-3"
             >
               <Image
                 src={image.src}

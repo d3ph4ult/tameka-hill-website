@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section id="top" className="pt-28 pb-16 sm:pt-36 sm:pb-20">
       <div className="content-shell">
-        <div className="relative overflow-hidden rounded-[1.75rem] border border-line bg-bg-raised p-6 card-shadow-lg sm:p-10 lg:p-14">
+        <div className="relative overflow-hidden rounded-sm border border-line bg-bg-raised p-6 card-shadow-lg sm:p-10 lg:p-14">
           {/* Oversized ghost monogram: a quiet corporate-seal watermark that fills
               the negative space behind the title instead of leaving it empty. */}
           <p
@@ -65,7 +65,7 @@ export function Hero() {
               initial="hidden"
               animate="show"
               variants={fadeUp}
-              className="relative z-0 font-display text-[2.4rem] font-medium leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-[8rem] lg:leading-[0.92]"
+              className="relative z-0 font-display text-[2.4rem] font-black leading-[0.92] tracking-tighter text-ink sm:text-6xl lg:text-[8rem] lg:leading-[0.88]"
             >
               Empowering
               <br />
@@ -76,24 +76,23 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 mx-auto mt-10 w-full max-w-xs sm:max-w-sm lg:absolute lg:top-0 lg:right-0 lg:mt-0 lg:w-[54%] lg:max-w-[38rem]"
+              className="relative z-10 mx-auto mt-10 w-full max-w-[15rem] sm:max-w-[17rem] lg:absolute lg:-top-6 lg:-right-8 lg:mt-0 lg:w-[76%] lg:max-w-[58rem]"
             >
-              <div className="card-shadow-lg relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
-                <Image
-                  src="/hero-new/portrait-black-dress.jpg"
-                  alt="Portrait of Tameka Hill"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 37vw, 80vw"
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/hero-new/portrait-cutout.webp"
+                alt="Portrait of Tameka Hill"
+                width={1300}
+                height={2178}
+                priority
+                sizes="(min-width: 1024px) 22vw, 55vw"
+                className="h-auto w-full drop-shadow-[0_18px_30px_rgba(24,20,15,0.28)]"
+              />
 
               <motion.div
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="card-shadow absolute -top-4 -right-3 rounded-full border border-line bg-bg px-4 py-1.5 text-xs font-semibold text-accent sm:-right-5"
+                className="card-shadow absolute top-6 -right-3 rounded-sm border border-line bg-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent sm:-right-5"
               >
                 Booking Fall engagements
               </motion.div>
@@ -102,9 +101,9 @@ export function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="card-shadow absolute -bottom-6 -left-4 flex items-center gap-3 rounded-xl border border-line bg-bg-raised px-5 py-4 sm:-left-8"
+                className="card-shadow absolute bottom-10 -left-4 flex items-center gap-3 rounded-sm border border-line bg-bg-raised px-5 py-4 sm:-left-8"
               >
-                <div className="flex text-gold" aria-hidden="true">
+                <div className="flex text-gold drop-shadow-[0_0_3px_rgba(212,164,55,0.5)]" aria-hidden="true">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                   ))}
@@ -116,7 +115,7 @@ export function Hero() {
               </motion.div>
             </motion.div>
 
-            <div className="relative z-0 mt-6 lg:pr-[48%]">
+            <div className="relative z-20 mt-6 lg:pr-[48%]">
               <motion.p
                 custom={2}
                 initial="hidden"
@@ -124,8 +123,8 @@ export function Hero() {
                 variants={fadeUp}
                 className="max-w-lg font-display text-2xl italic leading-snug text-ink-muted sm:text-3xl"
               >
-                Through professional <span className="text-accent">speaking</span> and expert{" "}
-                <span className="text-accent">résumé writing</span>.
+                Through professional <span className="text-accent text-shine">speaking</span> and expert{" "}
+                <span className="text-accent text-shine">résumé writing</span>.
               </motion.p>
 
               <motion.p
@@ -145,12 +144,17 @@ export function Hero() {
                 initial="hidden"
                 animate="show"
                 variants={fadeUp}
-                className="mt-8 flex flex-col gap-3 sm:flex-row"
+                className="relative z-20 mt-8 flex flex-col gap-3 sm:flex-row"
               >
                 <Button href="#booking" size="lg">
                   Book a Speaking Session
                 </Button>
-                <Button href="#booking" size="lg" variant="secondary">
+                <Button
+                  href="#booking"
+                  size="lg"
+                  variant="secondary"
+                  className="bg-bg/[0.02] backdrop-blur-[2px]"
+                >
                   Get Your Résumé Reviewed
                 </Button>
               </motion.div>
@@ -162,7 +166,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-14 grid grid-cols-2 divide-y divide-line-soft rounded-2xl border border-line bg-bg sm:grid-cols-4 sm:divide-y-0 sm:divide-x lg:mt-[15rem]"
+            className="card-shadow-lg relative z-20 mt-14 grid grid-cols-2 divide-y divide-line-soft/60 rounded-sm border border-line bg-bg/[0.02] backdrop-blur-[2px] sm:grid-cols-4 sm:divide-y-0 sm:divide-x lg:mt-10 lg:max-w-[52%] lg:grid-cols-2 lg:divide-x-0 lg:divide-y"
           >
             {trustStats.map((stat, i) => {
               const Icon = statIcons[i % statIcons.length];
@@ -179,7 +183,7 @@ export function Hero() {
             })}
           </motion.dl>
 
-          <p className="mt-6 text-center text-xs text-ink-faint sm:text-left">{site.hours}</p>
+          <p className="relative z-20 mt-6 text-center text-xs text-ink-faint sm:text-left">{site.hours}</p>
         </div>
       </div>
     </section>

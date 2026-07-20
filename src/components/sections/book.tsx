@@ -8,7 +8,7 @@ export function Book() {
     <section id="book" className="py-24 sm:py-28">
       <div className="content-shell grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div className="mx-auto grid w-full max-w-md grid-cols-[1.3fr_1fr] items-center gap-5 lg:max-w-none">
-          <div className="card-shadow-lg relative aspect-[2/3] w-full -rotate-2 overflow-hidden rounded-2xl">
+          <div className="card-shadow-lg relative aspect-[2/3] w-full -rotate-2 overflow-hidden rounded-sm">
             <Image
               src={book.coverImage}
               alt={`Tameka Hill signing copies of ${book.title}`}
@@ -19,7 +19,7 @@ export function Book() {
 
           <div className="flex flex-col gap-5">
             {book.supportingImages.map((image) => (
-              <div key={image.src} className="card-shadow relative aspect-square w-full overflow-hidden rounded-2xl">
+              <div key={image.src} className="card-shadow relative aspect-square w-full overflow-hidden rounded-sm">
                 <Image src={image.src} alt={image.alt} fill className="object-cover" />
               </div>
             ))}

@@ -18,7 +18,7 @@ export function Services() {
         remembers you, or the hiring manager keeps reading.
       </p>
 
-      <div className="mt-8 divide-y divide-line rounded-2xl border border-line bg-bg-raised">
+      <div className="mt-8 divide-y divide-line rounded-sm border border-line bg-bg-raised">
         {serviceCategories.map((service) => {
           const Icon = serviceIcons[service.id] ?? Mic;
           return (
