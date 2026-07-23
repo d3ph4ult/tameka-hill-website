@@ -9,16 +9,16 @@ const serviceIcons: Record<string, typeof Mic> = {
 export function Services() {
   return (
     <div>
-      <p className="eyebrow">What Tameka Offers</p>
-      <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+      <p className="eyebrow text-accent-contrast">What Tameka Offers</p>
+      <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">
         Two crafts, one standard
       </h2>
-      <p className="mt-4 text-base leading-relaxed text-ink-muted">
+      <p className="mt-4 text-base leading-relaxed text-accent-contrast/70">
         Every service is built around a single outcome: the room
         remembers you, or the hiring manager keeps reading.
       </p>
 
-      <div className="mt-8 divide-y divide-line rounded-sm border border-line bg-bg-raised">
+      <div className="mt-8 divide-y divide-line rounded-sm border border-line bg-bg-raised text-ink">
         {serviceCategories.map((service) => {
           const Icon = serviceIcons[service.id] ?? Mic;
           return (
@@ -27,7 +27,7 @@ export function Services() {
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
                   <Icon size={17} aria-hidden="true" />
                 </span>
-                <span className="eyebrow">{service.eyebrow}</span>
+                <span className="eyebrow text-ink">{service.eyebrow}</span>
               </div>
               <h3 className="mt-3 font-display text-xl font-medium text-ink">{service.title}</h3>
               <p className="mt-2.5 text-sm leading-relaxed text-ink-muted">{service.description}</p>

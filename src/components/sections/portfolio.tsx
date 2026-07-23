@@ -44,8 +44,8 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
 
   return (
     <div>
-      <p className="eyebrow">Portfolio</p>
-      <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+      <p className="eyebrow text-accent-contrast">Portfolio</p>
+      <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">
         From the stage and the studio
       </h2>
 
@@ -57,7 +57,7 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
               onClick={(e) => open(index, e.currentTarget)}
               className="group block w-full text-left"
             >
-              <span className="card-shadow relative block aspect-[4/5] w-full overflow-hidden rounded-sm">
+              <span className="card-shadow relative block aspect-[4/5] w-full overflow-hidden rounded-sm border-4 border-gold-border">
                 <Image
                   src={image.image_url}
                   alt={image.title}
@@ -66,7 +66,7 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
                   className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
               </span>
-              <span className="mt-2.5 block text-sm font-medium text-ink">{image.title}</span>
+              <span className="mt-2.5 block text-sm font-medium text-accent-contrast">{image.title}</span>
             </button>
           </li>
         ))}
@@ -99,7 +99,7 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
                 alt={active.title}
                 width={900}
                 height={1125}
-                className="max-h-[80vh] w-auto rounded-sm object-contain"
+                className="max-h-[80vh] w-auto rounded-sm border-4 border-gold-border object-contain"
               />
               <p className="mt-3 text-center text-sm text-white/85">{active.title}</p>
 

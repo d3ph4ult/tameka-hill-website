@@ -8,7 +8,7 @@ export function Book() {
     <section id="book" className="py-24 sm:py-28">
       <div className="content-shell grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div className="mx-auto grid w-full max-w-md grid-cols-[1.3fr_1fr] items-center gap-5 lg:max-w-none">
-          <div className="card-shadow-lg relative aspect-[2/3] w-full -rotate-2 overflow-hidden rounded-sm">
+          <div className="card-shadow-lg relative aspect-[2/3] w-full -rotate-2 overflow-hidden rounded-sm border-4 border-gold-border">
             <Image
               src={book.coverImage}
               alt={`Tameka Hill signing copies of ${book.title}`}
@@ -19,7 +19,7 @@ export function Book() {
 
           <div className="flex flex-col gap-5">
             {book.supportingImages.map((image) => (
-              <div key={image.src} className="card-shadow relative aspect-square w-full overflow-hidden rounded-sm">
+              <div key={image.src} className="card-shadow relative aspect-square w-full overflow-hidden rounded-sm border-4 border-gold-border">
                 <Image src={image.src} alt={image.alt} fill className="object-cover" />
               </div>
             ))}
@@ -27,17 +27,17 @@ export function Book() {
         </div>
 
         <div>
-          <p className="eyebrow">{book.eyebrow}</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">{book.title}</h2>
-          <p className="mt-3 font-display text-lg italic text-ink-muted">{book.subtitle}</p>
+          <p className="eyebrow text-accent-contrast">{book.eyebrow}</p>
+          <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">{book.title}</h2>
+          <p className="mt-3 font-display text-lg italic text-accent-contrast/70">{book.subtitle}</p>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted">{book.description}</p>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-accent-contrast/70">{book.description}</p>
 
           {book.details.length > 0 && (
             <ul className="mt-7 space-y-2.5">
               {book.details.map((detail) => (
-                <li key={detail} className="flex items-start gap-2.5 text-sm text-ink">
-                  <Check size={16} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />
+                <li key={detail} className="flex items-start gap-2.5 text-sm text-accent-contrast">
+                  <Check size={16} className="mt-0.5 shrink-0 text-accent-contrast" aria-hidden="true" />
                   {detail}
                 </li>
               ))}

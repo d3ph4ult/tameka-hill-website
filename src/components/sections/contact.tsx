@@ -8,7 +8,7 @@ import { initialContactState } from "@/lib/action-state";
 import { site } from "@/lib/constants";
 
 const inputClasses =
-  "w-full rounded-sm border border-line bg-bg px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus-visible:outline-2 focus-visible:outline-accent";
+  "w-full rounded-sm border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus-visible:outline-2 focus-visible:outline-accent";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -30,30 +30,30 @@ export function Contact() {
     <section id="contact" className="py-24 sm:py-28">
       <div className="content-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
-          <p className="eyebrow">Contact</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">Get in touch</h2>
-          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-muted">
+          <p className="eyebrow text-accent-contrast">Contact</p>
+          <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">Get in touch</h2>
+          <p className="mt-4 max-w-md text-base leading-relaxed text-accent-contrast/70">
             For bookings, use the form above. For everything else — press,
             partnerships, questions — reach out directly.
           </p>
 
           <ul className="mt-8 space-y-4">
-            <li className="flex items-center gap-3 text-sm text-ink">
-              <Mail size={18} className="text-accent" aria-hidden="true" />
-              <a href={`mailto:${site.email}`} className="hover:text-accent">{site.email}</a>
+            <li className="flex items-center gap-3 text-sm text-accent-contrast">
+              <Mail size={18} className="text-accent-contrast" aria-hidden="true" />
+              <a href={`mailto:${site.email}`} className="hover:text-gold-strong">{site.email}</a>
             </li>
-            <li className="flex items-center gap-3 text-sm text-ink">
-              <Phone size={18} className="text-accent" aria-hidden="true" />
-              <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-accent">{site.phone}</a>
+            <li className="flex items-center gap-3 text-sm text-accent-contrast">
+              <Phone size={18} className="text-accent-contrast" aria-hidden="true" />
+              <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-gold-strong">{site.phone}</a>
             </li>
-            <li className="flex items-center gap-3 text-sm text-ink">
-              <MessageCircle size={18} className="text-accent" aria-hidden="true" />
-              <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+            <li className="flex items-center gap-3 text-sm text-accent-contrast">
+              <MessageCircle size={18} className="text-accent-contrast" aria-hidden="true" />
+              <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-gold-strong">
                 Message on WhatsApp
               </a>
             </li>
-            <li className="flex items-center gap-3 text-sm text-ink-muted">
-              <Clock size={18} className="text-accent" aria-hidden="true" />
+            <li className="flex items-center gap-3 text-sm text-accent-contrast/70">
+              <Clock size={18} className="text-accent-contrast" aria-hidden="true" />
               {site.hours}
             </li>
           </ul>

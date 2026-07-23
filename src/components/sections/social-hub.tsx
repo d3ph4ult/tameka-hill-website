@@ -23,11 +23,11 @@ export function SocialHub({
       <div className="content-shell">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <p className="eyebrow">Connect</p>
-            <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+            <p className="eyebrow text-accent-contrast">Connect</p>
+            <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">
               One place to follow the work
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-muted">
+            <p className="mt-4 text-base leading-relaxed text-accent-contrast/70">
               Event clips, career tips, and behind-the-scenes moments — pick the
               platform you&rsquo;re already on.
             </p>
@@ -38,7 +38,7 @@ export function SocialHub({
               {filmstrip.map((image, i) => (
                 <li
                   key={image.id}
-                  className="card-shadow relative hidden aspect-square w-16 overflow-hidden rounded-sm border border-line sm:block"
+                  className="card-shadow relative hidden aspect-square w-16 overflow-hidden rounded-sm border-4 border-gold-border sm:block"
                   style={{ marginTop: i % 2 === 1 ? "1.25rem" : 0 }}
                 >
                   <Image src={image.image_url} alt="" fill sizes="64px" className="object-cover" />
@@ -66,7 +66,7 @@ export function SocialHub({
                   onClick={() => {
                     void trackSocialClick(link.platform);
                   }}
-                  className="group flex h-full flex-col justify-between gap-6 rounded-sm border border-line bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
+                  className="group flex h-full flex-col justify-between gap-6 rounded-sm border-4 border-gold-border bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
                 >
                   <div className="flex items-start justify-between">
                     <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-accent">

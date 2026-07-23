@@ -8,8 +8,8 @@ export function ResumeTestimonials() {
     <section className="py-24 sm:py-28">
       <div className="content-shell">
         <div className="max-w-2xl">
-          <p className="eyebrow">Résumé Results</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+          <p className="eyebrow text-accent-contrast">Résumé Results</p>
+          <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">
             In their own words
           </h2>
         </div>
@@ -18,7 +18,7 @@ export function ResumeTestimonials() {
           {resumeTestimonialImages.map((image) => (
             <div
               key={image.src}
-              className="card-shadow flex items-center justify-center rounded-sm border border-line bg-bg-raised p-3"
+              className="card-shadow flex items-center justify-center rounded-sm border-4 border-gold-border bg-bg-raised p-3"
             >
               <Image
                 src={image.src}

@@ -1,29 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #ffffff;
-  --bg-soft: #ddd0b9;
-  --bg-raised: #faf8f3;
-  --ink: #18140f;
-  --ink-muted: #5c554b;
-  --ink-faint: #938a7b;
-  --line: #e4d9c4;
-  --line-soft: #ede4d2;
+  --bg: #1b1d32;
+  --bg-soft: #24273f;
+  --bg-raised: #f7f4ef;
+  --ink: #1b1d32;
+  --ink-muted: #52546a;
+  --ink-faint: #85869a;
+  --line: #dcd8cf;
+  --line-soft: #e8e4db;
 
-  --accent: #b3872f;
-  --accent-strong: #8a6620;
-  --accent-soft: #f1e6d2;
-  --accent-contrast: #18140f;
+  --accent: #1b1d32;
+  --accent-strong: #0e0f1c;
+  --accent-soft: #eae7e0;
+  --accent-contrast: #f7f4ef;
 
-  --gold: #d4a437;
-  --gold-soft: #f2dfa0;
-  --gold-strong: #a67c1f;
-  --gold-shine: #fff6de;
+  --gold: #f7f4ef;
+  --gold-soft: #eae7e0;
+  --gold-strong: #e3ded2;
+  --gold-shine: #ffffff;
+  --gold-border: #d4af37;
 
   --success: #1f7a4d;
   --success-soft: #e7f5ee;
 
-  --shadow-color: 30 25% 8%;
+  --shadow-color: 230 40% 6%;
 }
 
 @theme inline {
@@ -45,6 +46,7 @@
   --color-gold-soft: var(--gold-soft);
   --color-gold-strong: var(--gold-strong);
   --color-gold-shine: var(--gold-shine);
+  --color-gold-border: var(--gold-border);
 
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
@@ -66,16 +68,14 @@
 
   body {
     background-color: var(--bg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0.016  0 0 0 0 0.08  0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    color: var(--ink);
+    color: var(--accent-contrast);
     font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 400;
-    letter-spacing: 0.01em;
+    font-weight: 500;
+    letter-spacing: 0;
     text-wrap: balance;
   }
 
@@ -85,7 +85,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--gold);
     outline-offset: 3px;
   }
 
@@ -114,10 +114,8 @@
     font-family: var(--font-sans);
     font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--accent);
-    text-shadow: 0 0 12px rgba(212, 164, 55, 0.35);
   }
 
   .eyebrow::before {
@@ -126,25 +124,21 @@
     width: 1.35rem;
     height: 1px;
     flex-shrink: 0;
-    background: var(--accent);
+    background: currentColor;
+    opacity: 0.6;
   }
 
   .script-accent {
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 300;
-    color: var(--accent);
-  }
-
-  .text-shine {
-    text-shadow: 0 0 16px rgba(212, 164, 55, 0.4);
   }
 
   .royal-pattern {
     background-image: repeating-linear-gradient(
       135deg,
-      rgba(162, 129, 78, 0.09) 0px,
-      rgba(162, 129, 78, 0.09) 1px,
+      rgba(247, 244, 239, 0.06) 0px,
+      rgba(247, 244, 239, 0.06) 1px,
       transparent 1px,
       transparent 13px
     );
@@ -170,26 +164,23 @@
   }
 
   .card-shadow {
-    box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.05);
+    box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.08), 0 8px 24px -12px hsl(var(--shadow-color) / 0.25);
   }
 
   .card-shadow-lg {
-    box-shadow: 0 4px 16px -6px hsl(var(--shadow-color) / 0.14);
+    box-shadow: 0 4px 10px hsl(var(--shadow-color) / 0.1), 0 20px 48px -16px hsl(var(--shadow-color) / 0.35);
   }
 
   .btn-gold-shine {
-    background-image: linear-gradient(135deg, var(--gold-shine) 0%, var(--gold) 45%, var(--gold-strong) 100%);
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.55), 0 1px 2px hsl(var(--shadow-color) / 0.15);
-    transition: filter 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--gold);
+    transition: background-color 0.2s ease;
   }
 
   .btn-gold-shine:hover {
-    filter: brightness(1.06);
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.7), 0 4px 12px -4px hsl(var(--shadow-color) / 0.32);
+    background-color: var(--gold-strong);
   }
 
   .btn-gold-shine:active {
-    filter: brightness(0.94);
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 1px 2px hsl(var(--shadow-color) / 0.2);
+    background-color: var(--gold-strong);
   }
 }

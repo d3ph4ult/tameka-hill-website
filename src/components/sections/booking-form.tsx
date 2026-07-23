@@ -15,7 +15,7 @@ const serviceOptions = [
 ];
 
 const inputClasses =
-  "w-full rounded-sm border border-line bg-bg px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus-visible:outline-2 focus-visible:outline-accent";
+  "w-full rounded-sm border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition-colors focus-visible:outline-2 focus-visible:outline-accent";
 
 function SubmitButton() {
   const { pending } = useFormStatus();

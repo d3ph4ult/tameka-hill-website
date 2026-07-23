@@ -38,7 +38,7 @@ export function Hero() {
               initial="hidden"
               animate="show"
               variants={fadeUp}
-              className="eyebrow"
+              className="eyebrow text-ink"
             >
               Speaker &middot; Career Strategist &middot; Résumé Writer
             </motion.p>
@@ -81,8 +81,8 @@ export function Hero() {
               <Image
                 src="/hero-new/portrait-cutout.webp"
                 alt="Portrait of Tameka Hill"
-                width={1300}
-                height={2178}
+                width={1700}
+                height={2848}
                 priority
                 sizes="(min-width: 1024px) 22vw, 55vw"
                 className="h-auto w-full drop-shadow-[0_18px_30px_rgba(24,20,15,0.28)]"
@@ -92,7 +92,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="card-shadow absolute top-6 -right-3 rounded-sm border border-line bg-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent sm:-right-5"
+                className="card-shadow absolute top-6 -right-3 rounded-sm border border-line bg-bg-raised px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-ink sm:-right-5"
               >
                 Booking Fall engagements
               </motion.div>
@@ -103,7 +103,7 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className="card-shadow absolute bottom-10 -left-4 flex items-center gap-3 rounded-sm border border-line bg-bg-raised px-5 py-4 sm:-left-8"
               >
-                <div className="flex text-gold drop-shadow-[0_0_3px_rgba(212,164,55,0.5)]" aria-hidden="true">
+                <div className="flex text-ink" aria-hidden="true">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                   ))}

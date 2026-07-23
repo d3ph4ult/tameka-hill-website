@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const poppinsDisplay = Poppins({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
-const manrope = Manrope({
+const poppinsBody = Poppins({
   variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}>
+    <html lang="en" className={`${poppinsDisplay.variable} ${poppinsBody.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-ink">{children}</body>
     </html>
   );

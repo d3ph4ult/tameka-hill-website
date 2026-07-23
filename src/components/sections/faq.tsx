@@ -12,13 +12,13 @@ export function Faq() {
     <section className="py-24 sm:py-28">
       <div className="content-shell grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
         <div>
-          <p className="eyebrow">FAQ</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+          <p className="eyebrow text-accent-contrast">FAQ</p>
+          <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">
             Common questions
           </h2>
         </div>
 
-        <ul className="divide-y divide-line border-t border-b border-line">
+        <ul className="divide-y divide-accent-contrast/15 border-t border-b border-accent-contrast/15">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
             const panelId = `${idBase}-panel-${index}`;
@@ -34,11 +34,11 @@ export function Faq() {
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className="flex w-full items-center justify-between gap-6 py-6 text-left"
                   >
-                    <span className="font-display text-lg font-medium text-ink">{item.question}</span>
+                    <span className="font-display text-lg font-medium text-accent-contrast">{item.question}</span>
                     <ChevronDown
                       size={20}
                       aria-hidden="true"
-                      className={`shrink-0 text-ink-muted transition-transform duration-200 ${isOpen ? "rotate-180 text-accent" : ""}`}
+                      className={`shrink-0 text-accent-contrast/70 transition-transform duration-200 ${isOpen ? "rotate-180 text-gold-strong" : ""}`}
                     />
                   </button>
                 </h3>
@@ -49,7 +49,7 @@ export function Faq() {
                   hidden={!isOpen}
                   className="pb-6 pr-10"
                 >
-                  <p className="text-sm leading-relaxed text-ink-muted">{item.answer}</p>
+                  <p className="text-sm leading-relaxed text-accent-contrast/70">{item.answer}</p>
                 </div>
               </li>
             );

@@ -12,12 +12,12 @@ export function About() {
     <section id="about" className="py-24 sm:py-28">
       <div className="content-shell grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div className="order-2 lg:order-1">
-          <p className="eyebrow">About Tameka</p>
-          <h2 className="mt-3 text-3xl font-medium text-ink sm:text-4xl">
+          <p className="eyebrow text-accent-contrast">About Tameka</p>
+          <h2 className="mt-3 text-3xl font-medium text-accent-contrast sm:text-4xl">
             Twelve years on stage and behind the résumé, in service of the same goal.
           </h2>
 
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-muted">
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-accent-contrast/70">
             <p>
               Tameka Hill has spent the last decade helping people communicate
               their value — to a room of a thousand, and to a single hiring
@@ -38,20 +38,20 @@ export function About() {
             </p>
           </div>
 
-          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line pt-8">
+          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-accent-contrast/20 pt-8">
             {highlights.map((item) => (
               <div key={item.label}>
-                <dt className="text-xs font-semibold uppercase tracking-wide text-ink-faint">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-accent-contrast/50">
                   {item.label}
                 </dt>
-                <dd className="mt-1.5 text-sm font-medium text-ink">{item.value}</dd>
+                <dd className="mt-1.5 text-sm font-medium text-accent-contrast">{item.value}</dd>
               </div>
             ))}
           </dl>
         </div>
 
         <div className="order-1 lg:order-2">
-          <div className="card-shadow relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm lg:ml-auto lg:max-w-none">
+          <div className="card-shadow relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm border-4 border-gold-border lg:ml-auto lg:max-w-none">
             <Image
               src="/about-v3/portrait.jpg"
               alt="Portrait of Tameka Hill"
