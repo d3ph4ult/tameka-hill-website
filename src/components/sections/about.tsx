@@ -51,7 +51,7 @@ export function About() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <div className="card-shadow relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm border-4 border-gold-border lg:ml-auto lg:max-w-none">
+          <div className="card-shadow relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm border-[19px] border-gold-border lg:ml-auto lg:max-w-none">
             <Image
               src="/about-v3/portrait.jpg"
               alt="Portrait of Tameka Hill"

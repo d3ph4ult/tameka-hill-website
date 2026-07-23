@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { resumeTestimonialImages } from "@/lib/constants";
 
 export function ResumeTestimonials() {
@@ -15,10 +18,14 @@ export function ResumeTestimonials() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {resumeTestimonialImages.map((image) => (
-            <div
+          {resumeTestimonialImages.map((image, i) => (
+            <motion.div
               key={image.src}
-              className="card-shadow flex items-center justify-center rounded-sm border-4 border-gold-border bg-bg-raised p-3"
+              initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="card-shadow flex items-center justify-center rounded-sm border-[19px] border-gold-border bg-bg-raised p-3"
             >
               <Image
                 src={image.src}
@@ -27,7 +34,7 @@ export function ResumeTestimonials() {
                 height={800}
                 className="h-auto w-full rounded-lg object-contain"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

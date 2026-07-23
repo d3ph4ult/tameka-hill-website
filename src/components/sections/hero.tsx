@@ -76,7 +76,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 mx-auto mt-10 w-full max-w-[15rem] sm:max-w-[17rem] lg:absolute lg:-top-6 lg:-right-8 lg:mt-0 lg:w-[76%] lg:max-w-[58rem]"
+              className="relative z-10 mx-auto mt-10 w-full max-w-[15rem] sm:max-w-[17rem] lg:absolute lg:-top-4 lg:-right-16 lg:mt-0 lg:w-[48%] lg:max-w-[34rem]"
             >
               <Image
                 src="/hero-new/portrait-cutout.webp"
@@ -92,7 +92,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="card-shadow absolute top-6 -right-3 rounded-sm border border-line bg-bg-raised px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-ink sm:-right-5"
+                className="card-shadow absolute top-6 right-2 rounded-sm border border-line bg-bg-raised px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-ink"
               >
                 Booking Fall engagements
               </motion.div>

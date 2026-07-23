@@ -66,7 +66,7 @@ export function SocialHub({
                   onClick={() => {
                     void trackSocialClick(link.platform);
                   }}
-                  className="group flex h-full flex-col justify-between gap-6 rounded-sm border-4 border-gold-border bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
+                  className="group flex h-full flex-col justify-between gap-6 rounded-sm border-[19px] border-gold-border bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
                 >
                   <div className="flex items-start justify-between">
                     <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-accent">

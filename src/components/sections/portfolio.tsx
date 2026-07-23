@@ -57,7 +57,7 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
               onClick={(e) => open(index, e.currentTarget)}
               className="group block w-full text-left"
             >
-              <span className="card-shadow relative block aspect-[4/5] w-full overflow-hidden rounded-sm border-4 border-gold-border">
+              <span className="card-shadow relative block aspect-[4/5] w-full overflow-hidden rounded-sm border-[19px] border-gold-border">
                 <Image
                   src={image.image_url}
                   alt={image.title}
@@ -99,7 +99,7 @@ export function Portfolio({ images }: { images: PortfolioImage[] }) {
                 alt={active.title}
                 width={900}
                 height={1125}
-                className="max-h-[80vh] w-auto rounded-sm border-4 border-gold-border object-contain"
+                className="max-h-[80vh] w-auto rounded-sm border-[19px] border-gold-border object-contain"
               />
               <p className="mt-3 text-center text-sm text-white/85">{active.title}</p>
 
