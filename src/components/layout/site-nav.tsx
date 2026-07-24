@@ -28,12 +28,12 @@ export function SiteNav() {
   return (
     <header
       className={clsx(
-        "fixed inset-x-0 top-0 z-50 bg-ink transition-shadow duration-300",
-        scrolled ? "shadow-[0_1px_0_rgba(255,255,255,0.08)]" : ""
+        "fixed inset-x-0 top-0 z-50 bg-bg transition-shadow duration-300",
+        scrolled ? "shadow-[0_1px_0_rgba(212,175,55,0.15)]" : ""
       )}
     >
       <nav className="content-shell flex h-18 items-center justify-between py-3" aria-label="Primary">
-        <a href="#top" className="flex items-center gap-2.5 font-display text-lg font-medium uppercase tracking-[0.14em] text-bg">
+        <a href="#top" className="flex items-center gap-2.5 font-display text-lg font-medium uppercase tracking-[0.14em] text-accent-contrast">
           {site.name}
         </a>
 
@@ -42,7 +42,7 @@ export function SiteNav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-bg/70 transition-colors hover:text-gold"
+                className="text-sm font-medium text-accent-contrast/70 transition-colors hover:text-gold-border"
               >
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ export function SiteNav() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-sm text-bg lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-sm text-accent-contrast lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -76,7 +76,7 @@ export function SiteNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-bg/10 bg-ink lg:hidden"
+            className="overflow-hidden border-t border-panel-line bg-bg lg:hidden"
           >
             <ul className="content-shell flex flex-col gap-1 py-4">
               {navLinks.map((link) => (
@@ -84,7 +84,7 @@ export function SiteNav() {
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-sm px-3 py-3 text-base font-medium text-bg hover:bg-bg/10"
+                    className="block rounded-sm px-3 py-3 text-base font-medium text-accent-contrast hover:bg-panel"
                   >
                     {link.label}
                   </a>

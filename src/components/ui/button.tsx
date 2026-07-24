@@ -13,11 +13,10 @@ const variants: Record<Variant, string> = {
   secondary:
     "border border-ink bg-transparent text-ink hover:bg-ink hover:text-bg",
   ghost: "text-ink hover:text-accent",
-  // For use on dark/ink-colored backgrounds (e.g. the closing CTA banner),
-  // where "secondary"'s ink-on-light styling would be invisible. Uses --bg
-  // (white) directly as the light contrast color for a dark surface.
+  // For use on dark backgrounds (e.g. the hero and the closing CTA banner),
+  // where "secondary"'s ink-on-light styling would be invisible.
   "outline-inverse":
-    "border border-bg/40 bg-transparent text-bg hover:border-bg hover:bg-bg/10",
+    "border border-accent-contrast/40 bg-transparent text-accent-contrast hover:border-accent-contrast hover:bg-accent-contrast/10",
 };
 
 const sizes: Record<Size, string> = {

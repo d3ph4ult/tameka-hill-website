@@ -38,7 +38,7 @@ export function SocialHub({
               {filmstrip.map((image, i) => (
                 <li
                   key={image.id}
-                  className="card-shadow relative hidden aspect-square w-16 overflow-hidden rounded-sm border-4 border-gold-border sm:block"
+                  className="card-shadow gold-glow relative hidden aspect-square w-16 overflow-hidden rounded-sm border-4 border-gold-border sm:block"
                   style={{ marginTop: i % 2 === 1 ? "1.25rem" : 0 }}
                 >
                   <Image src={image.image_url} alt="" fill sizes="64px" className="object-cover" />
@@ -66,28 +66,28 @@ export function SocialHub({
                   onClick={() => {
                     void trackSocialClick(link.platform);
                   }}
-                  className="group flex h-full flex-col justify-between gap-6 rounded-sm border-[19px] border-gold-border bg-bg-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_-20px_rgba(18,41,79,0.35)]"
+                  className="group flex h-full flex-col justify-between gap-6 rounded-sm gold-glow border-[16px] border-gold-border bg-panel p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_-20px_rgba(0,0,0,0.5)]"
                 >
                   <div className="flex items-start justify-between">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-accent">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-gold-border/60 bg-panel-accent-soft text-gold-border">
                       {Icon ? <Icon size={19} aria-hidden="true" /> : null}
                     </span>
                     <ArrowUpRight
                       size={18}
                       aria-hidden="true"
-                      className="text-ink-faint transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                      className="text-panel-ink-faint transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-gold-border"
                     />
                   </div>
 
                   <div>
-                    <p className="font-display text-lg font-medium text-ink">{link.label}</p>
-                    <p className="text-sm text-ink-muted">{link.username}</p>
+                    <p className="font-display text-lg font-medium text-panel-ink">{link.label}</p>
+                    <p className="text-sm text-panel-ink-muted">{link.username}</p>
                     {link.description && (
-                      <p className="mt-2 text-sm leading-relaxed text-ink-muted">{link.description}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-panel-ink-muted">{link.description}</p>
                     )}
                   </div>
 
-                  <span className="text-sm font-semibold text-accent">Follow &rarr;</span>
+                  <span className="text-sm font-semibold text-gold-border">Follow &rarr;</span>
                 </a>
               </motion.li>
             );

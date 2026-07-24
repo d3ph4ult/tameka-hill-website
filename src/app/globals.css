@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #1b1d32;
-  --bg-soft: #24273f;
+  --bg: #120f0b;
+  --bg-soft: #1a1611;
   --bg-raised: #f7f4ef;
   --ink: #1b1d32;
   --ink-muted: #52546a;
@@ -19,12 +19,20 @@
   --gold-soft: #eae7e0;
   --gold-strong: #e3ded2;
   --gold-shine: #ffffff;
-  --gold-border: #ffdf00;
+  --gold-border: #d4af37;
+
+  --panel: #1e1912;
+  --panel-line: #3a3122;
+  --panel-line-soft: #2a2419;
+  --panel-ink: #f7f4ef;
+  --panel-ink-muted: rgba(247, 244, 239, 0.7);
+  --panel-ink-faint: rgba(247, 244, 239, 0.5);
+  --panel-accent-soft: rgba(212, 175, 55, 0.12);
 
   --success: #1f7a4d;
   --success-soft: #e7f5ee;
 
-  --shadow-color: 230 40% 6%;
+  --shadow-color: 30 40% 2%;
 }
 
 @theme inline {
@@ -47,6 +55,14 @@
   --color-gold-strong: var(--gold-strong);
   --color-gold-shine: var(--gold-shine);
   --color-gold-border: var(--gold-border);
+
+  --color-panel: var(--panel);
+  --color-panel-line: var(--panel-line);
+  --color-panel-line-soft: var(--panel-line-soft);
+  --color-panel-ink: var(--panel-ink);
+  --color-panel-ink-muted: var(--panel-ink-muted);
+  --color-panel-ink-faint: var(--panel-ink-faint);
+  --color-panel-accent-soft: var(--panel-accent-soft);
 
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
@@ -173,14 +189,25 @@
 
   .btn-gold-shine {
     background-color: var(--gold);
-    transition: background-color 0.2s ease;
+    box-shadow: 0 0 3px var(--gold-shine);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   .btn-gold-shine:hover {
     background-color: var(--gold-strong);
+    box-shadow: 0 0 3px var(--gold-shine);
   }
 
   .btn-gold-shine:active {
     background-color: var(--gold-strong);
+    box-shadow: 0 0 3px var(--gold-shine);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 3px var(--gold-shine);
+  }
+
+  .gold-text-glow {
+    text-shadow: 0 0 3px var(--gold-shine);
   }
 }

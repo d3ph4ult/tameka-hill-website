@@ -39,17 +39,17 @@ export function BookingForm() {
       <div
         role="status"
         aria-live="polite"
-        className="card-shadow flex flex-col items-center gap-3 rounded-sm border border-line bg-bg-raised px-8 py-16 text-center"
+        className="card-shadow gold-glow flex flex-col items-center gap-3 rounded-sm border border-panel-line bg-panel px-8 py-16 text-center"
       >
         <CheckCircle2 size={40} className="text-success" aria-hidden="true" />
-        <p className="font-display text-xl font-medium text-ink">Request received</p>
-        <p className="max-w-sm text-sm text-ink-muted">{state.message}</p>
+        <p className="font-display text-xl font-medium text-panel-ink">Request received</p>
+        <p className="max-w-sm text-sm text-panel-ink-muted">{state.message}</p>
       </div>
     );
   }
 
   return (
-    <form action={formAction} className="card-shadow space-y-6 rounded-sm border border-line bg-bg-raised p-6 sm:p-9">
+    <form action={formAction} className="card-shadow gold-glow space-y-6 rounded-sm border border-panel-line bg-panel p-6 sm:p-9">
       {/* Honeypot — hidden from real visitors, filled by most bots */}
       <div className="absolute h-0 w-0 overflow-hidden opacity-0" aria-hidden="true">
         <label htmlFor="company">Company</label>
@@ -90,14 +90,14 @@ export function BookingForm() {
       </div>
 
       <fieldset>
-        <legend className="mb-2 text-sm font-medium text-ink">Format</legend>
+        <legend className="mb-2 text-sm font-medium text-panel-ink">Format</legend>
         <div className="flex gap-6">
-          <label className="flex items-center gap-2 text-sm text-ink-muted">
-            <input type="radio" name="eventFormat" value="virtual" defaultChecked className="accent-accent" />
+          <label className="flex items-center gap-2 text-sm text-panel-ink-muted">
+            <input type="radio" name="eventFormat" value="virtual" defaultChecked className="accent-gold-border" />
             Virtual
           </label>
-          <label className="flex items-center gap-2 text-sm text-ink-muted">
-            <input type="radio" name="eventFormat" value="in_person" className="accent-accent" />
+          <label className="flex items-center gap-2 text-sm text-panel-ink-muted">
+            <input type="radio" name="eventFormat" value="in_person" className="accent-gold-border" />
             In person
           </label>
         </div>
@@ -139,11 +139,11 @@ export function BookingForm() {
         />
       </Field>
 
-      <div className="flex flex-col gap-4 border-t border-line-soft pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 border-t border-panel-line-soft pt-6 sm:flex-row sm:items-center sm:justify-between">
         <SubmitButton />
-        <p className="text-xs leading-relaxed text-ink-faint sm:max-w-[16rem]">
+        <p className="text-xs leading-relaxed text-panel-ink-faint sm:max-w-[16rem]">
           Already booked and need to cancel or reschedule? Email{" "}
-          <a href={`mailto:${site.email}`} className="font-medium text-accent">
+          <a href={`mailto:${site.email}`} className="font-medium text-gold-border">
             {site.email}
           </a>
           .
@@ -175,7 +175,7 @@ function Field({
 
   return (
     <div>
-      <label htmlFor={htmlFor} className="mb-1.5 block text-sm font-medium text-ink">
+      <label htmlFor={htmlFor} className="mb-1.5 block text-sm font-medium text-panel-ink">
         {label}
       </label>
       {field}

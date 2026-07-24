@@ -62,7 +62,7 @@ export function SiteFooter({ socialLinks }: { socialLinks: SocialLink[] }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border-4 border-gold-border bg-transparent text-accent-contrast/70 transition-colors hover:text-accent-contrast"
+                  className="gold-glow flex h-10 w-10 items-center justify-center rounded-full border-4 border-gold-border bg-transparent text-accent-contrast/70 transition-colors hover:text-accent-contrast"
                 >
                   {Icon ? <Icon size={17} aria-hidden="true" /> : null}
                 </a>

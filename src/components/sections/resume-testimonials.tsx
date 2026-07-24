@@ -25,7 +25,7 @@ export function ResumeTestimonials() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="card-shadow flex items-center justify-center rounded-sm border-[19px] border-gold-border bg-bg-raised p-3"
+              className="card-shadow flex items-center justify-center rounded-sm gold-glow border-[16px] border-gold-border bg-panel p-3"
             >
               <Image
                 src={image.src}

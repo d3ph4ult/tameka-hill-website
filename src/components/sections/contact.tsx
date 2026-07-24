@@ -64,14 +64,14 @@ export function Contact() {
             <div
               role="status"
               aria-live="polite"
-              className="card-shadow flex flex-col items-center gap-3 rounded-sm border border-line bg-bg-raised px-8 py-16 text-center"
+              className="card-shadow gold-glow flex flex-col items-center gap-3 rounded-sm border border-panel-line bg-panel px-8 py-16 text-center"
             >
               <CheckCircle2 size={40} className="text-success" aria-hidden="true" />
-              <p className="font-display text-xl font-medium text-ink">Message sent</p>
-              <p className="max-w-sm text-sm text-ink-muted">{state.message}</p>
+              <p className="font-display text-xl font-medium text-panel-ink">Message sent</p>
+              <p className="max-w-sm text-sm text-panel-ink-muted">{state.message}</p>
             </div>
           ) : (
-            <form action={formAction} className="card-shadow space-y-5 rounded-sm border border-line bg-bg-raised p-6 sm:p-9">
+            <form action={formAction} className="card-shadow gold-glow space-y-5 rounded-sm border border-panel-line bg-panel p-6 sm:p-9">
               <div className="absolute h-0 w-0 overflow-hidden opacity-0" aria-hidden="true">
                 <label htmlFor="contact-company">Company</label>
                 <input id="contact-company" name="company" type="text" tabIndex={-1} autoComplete="off" />
@@ -85,7 +85,7 @@ export function Contact() {
 
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">Name</label>
+                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-panel-ink">Name</label>
                   <input
                     id="name"
                     name="name"
@@ -101,7 +101,7 @@ export function Contact() {
                   )}
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="mb-1.5 block text-sm font-medium text-ink">Email</label>
+                  <label htmlFor="contact-email" className="mb-1.5 block text-sm font-medium text-panel-ink">Email</label>
                   <input
                     id="contact-email"
                     name="email"
@@ -119,7 +119,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-ink">Subject</label>
+                <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-panel-ink">Subject</label>
                 <input
                   id="subject"
                   name="subject"
@@ -135,7 +135,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink">Message</label>
+                <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-panel-ink">Message</label>
                 <textarea
                   id="message"
                   name="message"
